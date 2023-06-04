@@ -5,7 +5,7 @@ on:
   
 jobs:
   build-pkg:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: Ste74/build-pkgs@main
         with:
