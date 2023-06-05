@@ -5,12 +5,12 @@ on:
   
 jobs:
   build-pkg:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Set up swap space
         uses: pierotofy/set-swap-space@v1.0
         with:
-          swap-size-gb: 10
+          swap-size-gb: 16
           
       - uses: Ste74/build-pkgs@main
         with:
