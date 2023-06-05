@@ -7,6 +7,11 @@ jobs:
   build-pkg:
     runs-on: ubuntu-20.04
     steps:
+      - name: Set up swap space
+        uses: pierotofy/set-swap-space@v1.0
+        with:
+          swap-size-gb: 10
+          
       - uses: Ste74/build-pkgs@main
         with:
           gitlab-user: ${{ secrets.gitlab_user }}
