@@ -14,7 +14,7 @@ jobs:
           
       - uses: Ste74/build-pkgs@main
         with:
-          repo-src: "https://gitlab.archlinux.org/archlinux/packaging/packages/firefox.git"
+          repo-src: "https://gitlab.archlinux.org/archlinux/packaging/packages/firefox"
           gitlab-user: ${{ secrets.gitlab_user }}
           gitlab-pw: ${{ secrets.gitlab_server_user }}
           user-mail: ${{ secrets.manjaro_mail }}
