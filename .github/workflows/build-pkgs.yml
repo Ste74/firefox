@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        BRANCH: [testing, stable]
+        BRANCH: [unstabe, testing, stable]
     steps:
       - name: Set up swap space
         uses: pierotofy/set-swap-space@v1.0
@@ -17,7 +17,7 @@ jobs:
           
       - uses: Ste74/build-pkgs@main
         with:
-          repo-src: "https://gitlab.archlinux.org/archlinux/packaging/packages/firefox"
+          repo-src: "https://gitlab.manjaro.org/security-overlay/firefox"
           gitlab-user: ${{ secrets.GITLAB_USER }}
           gitlab-pw: ${{ secrets.GITLB_SERVER_USER}}
           user-mail: ${{ secrets.MANJARO_MAIL }}
@@ -27,4 +27,4 @@ jobs:
           gpg-key: ${{ secrets.GPG_SIGNING_KEY }}
           gpg-key-sign: ${{ secrets.GPG_SIGN }}
           gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
-
+          gitlab-token: ${{ secrets.GITLAB_TOKEN }}
