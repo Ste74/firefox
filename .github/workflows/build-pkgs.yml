@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        BRANCH: [unstabe, testing, stable]
+        BRANCH: [unstable, testing, stable]
     steps:
       - name: Set up swap space
         uses: pierotofy/set-swap-space@v1.0
