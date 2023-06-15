@@ -5,10 +5,12 @@ on:
   
 jobs:
   build-pkg:
-    runs-on: ubuntu-latest
+    runs-on: buildjet-4vcpu-ubuntu-2204
     strategy:
       matrix:
-        BRANCH: [unstable, testing, stable]
+        #BRANCH: [unstable, testing, stable]
+        BRANCH: [testing]
+
     steps:
       - name: Set up swap space
         uses: pierotofy/set-swap-space@v1.0
