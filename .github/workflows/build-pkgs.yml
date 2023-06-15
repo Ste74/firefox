@@ -12,12 +12,13 @@ jobs:
         BRANCH: [testing]
 
     steps:
-      - name: Set up swap space
-        uses: pierotofy/set-swap-space@v1.0
-        with:
-          swap-size-gb: 10
+      #- name: Set up swap space
+      #  uses: pierotofy/set-swap-space@v1.0
+      #  with:
+      #    swap-size-gb: 10
           
-      - uses: Ste74/build-pkgs@main
+      - name: Build package
+        uses: Ste74/build-pkgs@main
         with:
           repo-src: "https://oauth2:${{ secrets.GITLAB_TOKEN }}@gitlab.manjaro.org/security-overlay/firefox"
           gitlab-user: ${{ secrets.GITLAB_USER }}
