@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         #BRANCH: [unstable, testing, stable]
-        BRANCH: [testing]
+        BRANCH: [unstable]
 
     steps:
       #- name: Set up swap space
