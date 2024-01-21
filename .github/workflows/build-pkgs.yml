@@ -14,10 +14,10 @@ jobs:
         BRANCH: [unstable]
 
     steps:
-      - name: Set up swap space
-        uses: pierotofy/set-swap-space@v1.0
-        with:
-          swap-size-gb: 10
+      #- name: Set up swap space
+        #uses: pierotofy/set-swap-space@v1.0
+        #with:
+          #swap-size-gb: 10
 
       - name: Get core numbers
         run: echo "NPROC=$(nproc)" >> $GITHUB_ENV
