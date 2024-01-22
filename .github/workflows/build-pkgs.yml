@@ -35,5 +35,4 @@ jobs:
           gpg-key: ${{ secrets.GPG_SIGNING_KEY }}
           gpg-key-sign: ${{ secrets.GPG_SIGN }}
           gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
-          build-args: |
-            MORE_BUILD_ARGS=-j${{ env.NPROC }}
+          n-job: "-j${{ env.NPROC }}"
