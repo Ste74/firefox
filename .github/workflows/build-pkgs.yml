@@ -14,6 +14,9 @@ jobs:
         BRANCH: [unstable]
 
     steps:
+      - name: Maximize build disk space
+        uses: easimon/maximize-build-space@v10
+            
       - name: Set up swap space
         uses: pierotofy/set-swap-space@v1.0
         with:
