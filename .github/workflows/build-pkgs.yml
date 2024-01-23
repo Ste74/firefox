@@ -19,8 +19,8 @@ jobs:
         with:
           swap-size-gb: 10
 
-      - name: Maximize build disk space
-        uses: easimon/maximize-build-space@v10
+      #- name: Maximize build disk space
+      #  uses: easimon/maximize-build-space@v10
 
       - name: Get core numbers
         run: echo "NPROC=$(nproc)" >> $GITHUB_ENV
